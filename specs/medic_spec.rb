@@ -5,11 +5,11 @@ require_relative '../medic'
 class MedicTest < MiniTest::Test
 
 	def setup
-		@medic = Medic.new("Alex", "Bazlinton")
+		@medic = Medic.new({first_name: "Alex", last_name:"Bazlinton"})
 	end
 
 	def test_medic_can_say_full_name
-		assert_equal("My name is Alex Bazlinton", @medic.say_full_name)
+		assert_equal("Alex Bazlinton", @medic.greeting)
 
 	end
 
